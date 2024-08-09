@@ -1,0 +1,36 @@
+---
+import { Icon } from "astro-icon/components";
+import Header from "../components/Header";
+import Loader from "../components/Loader";
+import "../styles/globals.css"
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="bg-topo">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
+		<!-- <link rel="stylesheet" href="@styles/globals.css"> -->
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="mx-0 xl:mx-24">
+		<Loader />
+		<main>
+			<Header>
+				<Icon name="logo" class="w-24 h-24"/>
+			</Header>
+			<slot />
+		</main>
+	</body>
+</html>
+<style is:global>
+	
+</style>

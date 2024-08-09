@@ -1,0 +1,91 @@
+---
+import { Icon } from "astro-icon/components";
+import React, { type ReactNode } from "react";
+import { ReactSVG } from "react-svg";
+
+interface ProjectInfo {
+    name: string;
+    description: string;
+    url: string;
+    icon: string;
+}
+
+const projectInfo: ProjectInfo[] = [
+    {
+        name: "Wordrix",
+        description: "A web app inspired by Wordle, with additional features.",
+        url: "https://github.com/sanjana-bhat-2002/wordrix",
+        icon: "word",
+    },
+    {
+        name: "Restaurant Table Booking App",
+        description: "UI for a website to book restaurant tables.",
+        url: "https://github.com/sanjana-bhat-2002/restaurant-table-booking",
+        icon: "restaurant",
+    },
+    {
+        name: "Portfolio",
+        description: "Source code for this portfolio website.",
+        url: "/",
+        icon: "person",
+    },
+];
+---
+
+<section class="text-gray-600 body-font px-5">
+    <h1 class="title-font sm:text-6xl text-6xl mb-2 font-medium text-white">
+        <span class="text-accent font-semibold"> My </span>
+        Work.
+        <br class="hidden lg:inline-block" />
+    </h1>
+    <div class="w-24 h-1 bg-gray-500 mb-8"></div>
+    <div class="container py-24 mx-auto flex flex-wrap justify-start">
+        {
+            projectInfo.map((project, index) => (
+                <div
+                    
+                    class="flex relative pb-20 sm:items-center md:w-2/3"
+                >
+                    <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                        <div class="h-full w-1 bg-gray-200 pointer-events-none" />
+                    </div>
+                    <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">
+                        {index + 1}
+                    </div>
+                    <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                        <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                            <Icon name={project.icon} class="w-10 h-10"/>
+                        </div>
+                        <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                            <h1 class="font-medium title-font text-accent mb-1 text-xl">
+                                {project.name}
+                            </h1>
+                            <p class="leading-relaxed text-white">
+                                {project.description}
+                            </p>
+                            <a
+                                href={project.url}
+                                class="mt-3 text-indigo-500 inline-flex items-center"
+                            >
+                                Source Code
+                                <svg
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    class="w-4 h-4 ml-2"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+</section>
+
+
