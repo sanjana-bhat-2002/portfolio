@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 const Hero = () => {
     return (
@@ -24,7 +24,7 @@ const Hero = () => {
                         <img src="/border.svg" className="" alt="Border" />
                     </div>
                     <div className="w-1/2 h-1/2 absolute inset-0 mx-auto flex justify-center items-center animate-upDown2">
-                        <img src="/profile-pic.png" className="object-cover overflow-hidden" alt="Profile Pic" />
+                        <img src="/profile-pic.webp" className="object-cover overflow-hidden" alt="Profile Pic" />
                     </div>
                 </div>
 
