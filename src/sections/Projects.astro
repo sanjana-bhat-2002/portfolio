@@ -30,20 +30,19 @@ const projectInfo: ProjectInfo[] = [
 ];
 ---
 
-<section class="text-gray-600 body-font px-5">
-    <h1 class="title-font sm:text-6xl text-6xl mb-2 font-medium text-white">
-        <span class="text-accent font-semibold"> My </span>
-        Work.
-        <br class="hidden lg:inline-block" />
-    </h1>
-    <div class="w-24 h-1 bg-gray-500 mb-8"></div>
-    <div class="container py-24 mx-auto flex flex-wrap justify-start">
+<section class="text-gray-600 body-font px-5 lg:my-24">
+    <div class="flex flex-col items-center justify-center lg:items-start">
+        <h1 class="title-font sm:text-6xl text-6xl mb-2 font-medium text-white">
+            <span class="text-accent font-semibold"> My </span>
+            Work.
+            <br class="hidden lg:inline-block" />
+        </h1>
+        <div class="w-24 h-1 bg-gray-500 mb-8"></div>
+    </div>
+    <div class="container py-8 mx-auto flex flex-wrap justify-start">
         {
             projectInfo.map((project, index) => (
-                <div
-                    
-                    class="flex relative pb-20 sm:items-center md:w-2/3"
-                >
+                <div class="flex relative pb-20 sm:items-center md:w-2/3">
                     <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
                         <div class="h-full w-1 bg-gray-200 pointer-events-none" />
                     </div>
@@ -52,7 +51,7 @@ const projectInfo: ProjectInfo[] = [
                     </div>
                     <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
                         <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
-                            <Icon name={project.icon} class="w-10 h-10"/>
+                            <Icon name={project.icon} class="w-10 h-10" />
                         </div>
                         <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
                             <h1 class="font-medium title-font text-accent mb-1 text-xl">
@@ -85,5 +84,3 @@ const projectInfo: ProjectInfo[] = [
         }
     </div>
 </section>
-
-

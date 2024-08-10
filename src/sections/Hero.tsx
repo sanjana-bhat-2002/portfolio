@@ -3,7 +3,7 @@
 const Hero = () => {
     return (
         <section className="text-gray-600 body-font my-8">
-            <div className="flex px-5 py-12 lg:flex-row flex-col-reverse items-center w-full">
+            <div className="flex px-5 lg:flex-row flex-col-reverse items-center w-full">
                 <div className="lg:flex-grow lg:w-1/2 w-full mt-16 lg:mt-0 lg:pr-16 flex flex-col lg:items-start lg:text-left mb-16 md:mb-0 items-center text-center">
                     <h1 className="title-font sm:text-6xl text-6xl mb-4 font-medium text-white">Hi, my name <br />is
                         <span className='text-accent font-semibold'> Sanjana.</span>
@@ -32,7 +32,7 @@ const Hero = () => {
 
             </div>
 
-            <div className="flex flex-col justify-center lg:items-start items-center lg:ml-36">
+            <div className="lg:flex flex-col justify-center lg:items-start items-center lg:ml-36 hidden mt-16">
                 <div className='flex flex-col justify-center items-center'>
 
                 
