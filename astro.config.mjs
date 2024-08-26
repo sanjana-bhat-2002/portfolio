@@ -4,9 +4,11 @@ import icon from "astro-icon";
 import react from "@astrojs/react";
 import path from 'node:path';
 
+import fontPicker from "astro-font-picker";
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), react(), icon()],
+  integrations: [tailwind(), react(), icon(), fontPicker()],
   vite: {
     resolve: {
       alias: {
